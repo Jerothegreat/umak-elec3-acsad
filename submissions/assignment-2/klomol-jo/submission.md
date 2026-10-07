@@ -4,7 +4,7 @@
 
 - GitHub username: klomol-jo
 - Section: 4 - ACSAD
-- IAM user name that I signed in with: Kristel
+- IAM user name that I signed in with: GROUP 9
 - X: 171
 
 ---
