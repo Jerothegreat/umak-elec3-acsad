@@ -37,11 +37,17 @@ Security group creation without the `team` tag (denied):
 
 Security group `acsad-g06-web` created successfully with tag `team=acsad-g06` (`sg-07981d47808069dd1`).
 
-Instance Running at: TODO (time)
+Security group creation (screenshot of `acsad-g06-web` created):
+
+<img width="973" height="544" alt="Screenshot 2026-09-24 225633" src="https://github.com/user-attachments/assets/ff32f605-3985-4048-b3f3-d82dfffc2474" />
+
+Re-run on 2026-10-20: `acsad-g06-web` had been deleted, so it was recreated with tag `team=acsad-g06`. The first launch attempt failed on `ec2:RunInstances` for a `key-pair/*` resource because a key pair was selected; relaunched with "Proceed without a key pair" as in Part B.
+
+Instance `i-0ad3b2b8ace14463e` (`t3.micro`) launched Tue Oct 20 2026 01:30:12 PHT; Running at: about 01:31 PHT (Oct 20, 2026).
 
 Screenshot #3 (instance in Running state):
 
-<img width="973" height="544" alt="Screenshot 2026-09-24 225633" src="https://github.com/user-attachments/assets/ff32f605-3985-4048-b3f3-d82dfffc2474" />
+![Instance Running](screenshots/03-running.png)
 
 
 ## Part E. Boundary test
