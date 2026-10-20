@@ -1,6 +1,6 @@
 ANSWER_1: based on the evidence, the failure we have is "cannot read" and "permission denied" to this location "/etc/course-portal/portal.conf"
 
-ANSWER_2: The permission classes group and others are "---" which indicates "0" or no access/permission to either read, write and execute. The onwner only has access read and write only because the owner permission is set as "rw-" 
+ANSWER_2: The file owner is root with rw- permission, the course-portal group has --- which means no permission, and others also have --- . The course-portal account is a member of the course-portal group, not the owner, hence it has no permission to read the file.
 
 ANSWER_3: 640
 
@@ -10,6 +10,6 @@ ANSWER_4_ORDER: B, G, E, D, F, A, I, C, H
 
 ANSWER_5: using 777 means giving all read, write and execute access to all permission classes, which is very wrong cause that would mean group and others has the same authority to owner, by having it, unauthorized writes and executes could happen to that location
 
-ANSWER_6: (Example) A description of a check that confirms the service itself works, not just that a command exited cleanly.
+ANSWER_6: (Example) Test the running service by sending a request to its endpoint and confirming that it responds correctly, rather than only checking that a command or process completed successfully.
 
 ANSWER_7_BRIDGE: component=server and application, detect=monitoring of application for errors or failures, recover=automatically restoring or restarting the service affected, proof=verifying that users can successfully access the Course Materials Portal again
