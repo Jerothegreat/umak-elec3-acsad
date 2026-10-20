@@ -34,9 +34,9 @@ Number of addresses in that CIDR:
 
 | Availability Zone | IPv4 CIDR |
 | --- | --- |
-| ap-southeast-1a | 172.31.0.0/20 |
+| ap-southeast-1a | 172.31.32.0/20 |
 | ap-southeast-1b | 172.31.16.0/20 |
-| ap-southeast-1c | 172.31.32.0/20 |
+| ap-southeast-1c | 172.31.0.0/20 |
 
 Screenshot 1. Save it as `screenshot-1-subnets.png` in your folder. The image line below shows it.
 
@@ -46,7 +46,7 @@ Screenshot 1. Save it as `screenshot-1-subnets.png` in your folder. The image li
 
 Available IPv4 addresses in each subnet:
 
-4,091
+4,090 (in ap-southeast-1a), 4,091 (in ap-southeast-1b), 4,091 (in ap-southeast-1c)
 
 Why is the number lower than 4,096?
 
@@ -124,8 +124,8 @@ Only instances or resources that are assigned to the exact same default security
 
 ### B1. Plan two subnets
 
-- Public subnet CIDR: 10.0.1.0/24
-- Private subnet CIDR: 10.0.2.0/24
+- Public subnet CIDR: 10.110.1.0/24
+- Private subnet CIDR: 10.110.2.0/24
 
 ### B2. Route tables
 
@@ -133,14 +133,14 @@ Route table of the public subnet:
 
 | Destination | Target |
 | --- | --- |
-| 10.0.0.0/16 | local |
+| 10.110.0.0/16 | local |
 | 0.0.0.0/0 | igw-0943e7e6f88293168 |
 
 Route table of the private subnet:
 
 | Destination | Target |
 | --- | --- |
-| 10.0.0.0/16 | local |
+| 10.110.0.0/16 | local |
 
 ### B3. My VPC diagram
 
@@ -160,7 +160,7 @@ No. Removing the route to the Internet Gateway breaks external inbound/outbound 
 
 Can the instance still reach another instance in the VPC? Why?
 
-Yes. The local route (`10.0.0.0/16 -> local`) is still intact, allowing internal communication between instances within the same VPC.
+Yes. The local route (`10.110.0.0/16 -> local`) is still intact, allowing internal communication between instances within the same VPC.
 
 ### B5. Place a database
 
