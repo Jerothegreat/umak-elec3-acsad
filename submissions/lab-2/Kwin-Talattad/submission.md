@@ -20,12 +20,13 @@ Sipin, John Cedric
 1. **Activity History:** Add a screenshot showing the Auto Scaling group's Activity history when the second instance launched.
    
    5.3. Open the Activity tab. Wait for a line that says a new instance is launching. Expect this in three to six minutes. Take a screenshot of this Activity History as proof.
-   ![Activity History](ScreenShots/5.3.png)
+   ![Screenshot 5.3](5.3.png)
 
 2. **CloudWatch Alarm:** Add a screenshot of the target tracking alarm in the "In alarm" state.
 
    5.7. Open the Monitoring tab of the group and look at the CPU chart. Take a screenshot of the CloudWatch Alarm or the CPU utilization chart as proof.
-   ![CloudWatch Alarm](ScreenShots/5.7.png)
+   ![Screenshot 5.7](5.7.png)
+
 
 ## Questions
 1. Why did the group stop at 2 instances?
