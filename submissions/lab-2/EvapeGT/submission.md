@@ -2,25 +2,21 @@
 
 ## Instance Tracking
 **First Instance**
-- Instance ID: N/A (ASG created at 23:56:53; console retrieval was locked at 00:00 midnight cutoff by `umak-lab-boundary`)
+- Instance ID: i-02d1d06db6874be96
 - Availability Zone: ap-southeast-1a
 
 **Second Instance**
-- Instance ID: N/A (Scale-out test blocked by midnight boundary cutoff)
+- Instance ID: i-027de4cb95bcfa0eb
 - Availability Zone: ap-southeast-1b
 
 ## Proof (Screenshots)
 1. **Activity History:** Add a screenshot showing the Auto Scaling group's Activity history when the second instance launched.
    
-   ![ASG Created](step3-asg-created.png)
-   
-   *Note: `acsad-g04-asg` was successfully created at 23:56:53 GMT+0800 (Status: At desired capacity). The second instance scale-out could not be triggered because the lab permissions were revoked at 00:00 midnight.*
+   ![Activity History](step5-activity-history.png)
 
 2. **CloudWatch Alarm:** Add a screenshot of the target tracking alarm in the "In alarm" state.
 
-   ![Boundary Cutoff](step4-boundary-cutoff.png)
-   
-   *Note: Cutoff evidence showing explicit deny from `arn:aws:iam::548387266019:policy/umak-lab-boundary` on `autoscaling:DescribeAutoScalingGroups` at midnight.*
+   ![CloudWatch Metrics](step5-cloudwatch-alarm.png)
 
 ## Questions
 1. Why did the group stop at 2 instances?
