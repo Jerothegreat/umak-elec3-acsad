@@ -82,10 +82,11 @@ else
   fail=1
 fi
 
-# Q4 — bypassed for instant pass
+# Q4 — one exact correct order; checked by hash for the same reason.
+EXPECTED_ANSWER4_HASH="b3caffa20004e48acad8af586346220b84dd47a272ec01718ccf1618a5cc4f14"
 order_line="$(grep -E '^ANSWER_4_ORDER:' "$FILE" | head -n1)"
 order_normalized="$(echo "$order_line" | sed -E 's/^ANSWER_4_ORDER:[[:space:]]*//' | tr -d '[:space:]' | tr '[:lower:]' '[:upper:]')"
-if [ -n "$order_normalized" ]; then
+if [ -n "$order_normalized" ] && [ "$(sha256 "$order_normalized")" = "$EXPECTED_ANSWER4_HASH" ]; then
   echo "PASS — ANSWER_4_ORDER is correct."
 else
   echo "FAIL — ANSWER_4_ORDER is not correct. Re-check the ordering hint in the assignment brief."

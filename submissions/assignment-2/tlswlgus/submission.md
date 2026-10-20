@@ -29,7 +29,7 @@ Number of addresses in that CIDR:
 | ap-southeast-1b | 172.31.16.0/20 |
 | ap-southeast-1c | 172.31.0.0/20 |
 
-![Screenshot 1: subnet list](screenshot-subnets.png)
+![Screenshot 1: subnet list](screenshot-1-subnets.png)
 
 ### A3. Available addresses
 
@@ -52,7 +52,7 @@ The subnet with the lowest number (4,090) is 172.31.32.0/20 in ap-southeast-1a. 
 | 172.31.0.0/16 | local |
 | 0.0.0.0/0 | igw-0943e7e6f88293168 |
 
-![Screenshot 2: routes of the route table](screenshot-routes.png)
+![Screenshot 2: routes of the route table](screenshot-2-routes.png)
 
 ### A5. Public or private
 
@@ -91,7 +91,7 @@ How is a network ACL different from a security group?
 
 A network ACL is a firewall on a whole subnet. It has allow and deny rules, checked by rule number from lowest to highest, and it is stateless, so each direction needs its own rule. A security group is a firewall on a resource, such as an instance. It has allow rules only and is stateful, so replies go back out without a separate rule.
 
-![Screenshot 3: inbound rules of the network ACL](screenshot-network-acl.png)
+![Screenshot 3: inbound rules of the network ACL](screenshot-3-network-acl.png)
 
 ### A9. The default security group
 
